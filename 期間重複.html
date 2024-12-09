@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期間重複判定</title>
+    <script>
+        // 期間が重複しているかを判定する関数
+        function isOverlap() {
+            // A期間（6月1日～6月30日）とB期間（5月20日～7月20日）
+            var aStart = new Date('2024-06-01');
+            var aEnd = new Date('2024-06-30');
+            var bStart = new Date('2024-05-20');
+            var bEnd = new Date('2024-07-20');
+            
+            // 期間の重複判定
+            if (aEnd < bStart || bEnd < aStart) {
+                // 重複していない場合
+                document.getElementById('result').innerHTML = "A期間とB期間は重複していません。";
+            } else {
+                // 重複している場合
+                document.getElementById('result').innerHTML = "A期間とB期間は重複しています。";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>期間重複判定</h1>
+    <p>指定された2つの期間（A期間とB期間）が重複しているかを判定します。</p>
+    
+    <!-- 判定ボタン -->
+    <button onclick="isOverlap()">重複判定</button>
+    
+    <!-- 判定結果を表示するための要素 -->
+    <p id="result"></p>
+</body>
+</html>

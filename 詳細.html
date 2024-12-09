@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求人詳細</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+        }
+
+        .job-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .job-details h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .job-details p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .job-details .info {
+            margin: 10px 0;
+        }
+
+        .apply-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+        
+        .back-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="uw09.html">求人検索</a>
+                <a href="uw07.html">利用者情報</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="job-details">
+            <h2>【マルウェア・エニックス】ITエンジニアを募集</h2>
+
+            <div class="info">
+                <p><strong>契約期間：</strong>2024年12月4日（水）～2025年3月4日（火）</p>
+                <p><strong>勤務時間：</strong>9:00～17:00</p>
+                <p><strong>月給：</strong>約25万円</p>
+                <p><strong>勤務地：</strong>東京都練馬区</p>
+                <p><strong>業務内容：</strong>ITエンジニアとして、システムの設計、開発、運用業務を担当していただきます。特に、クラウドサービスを活用したシステムの構築に関わる機会が多いです。</p>
+                <p><strong>応募資格：</strong>ITエンジニアとしての実務経験が3年以上ある方。また、AWSやAzureなどのクラウド環境に対する理解があると尚可。</p>
+            </div>
+
+            <a href="apply.html" class="apply-btn">この求人に応募する</a>
+            <a href="uw03.html" class="back-btn">求人一覧に戻る</a>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>応募済み求人</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="uw09.html">求人検索</a>
+                <a href="uw07.html">利用者情報</a>
+            </nav>
+            <form action="uw03.html" method="get" class="search-form">
+                企業名：<input type="search" name="search" placeholder="企業名を入力してください">
+                <input type="submit" name="submit" value="検索">
+            </form>
+            <form action="uw03.html" method="get" class="search-form">
+                <strong>職種：</strong>
+                <select name="" id="">
+                    <option value="">職種</option>
+                    <option value="">ITコンサルタント</option>
+                    <option value="">プロジェクトマネージャー</option>
+                    <option value="">プロジェクトリーダー</option>
+                    <option value="">システムエンジニア</option>
+                    <option value="">プログラマー</option>
+                    <option value="">サーバーエンジニア</option>
+                    <option value="">ネットワークエンジニア</option>
+                    <option value="">データベースエンジニア</option>
+                    <option value="">セキュリティエンジニア</option>
+                    <option value="">インフラエンジニア</option>
+                </select>
+                <strong>　報酬：</strong>
+                <input type="number">
+                <strong>万円～</strong>
+                <strong>　勤務期間：</strong>開始
+                <input type="time" placeholder="開始">～
+                終了<input type="time" placeholder="終了">
+                <br>
+                <strong>待遇：</strong>
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">交通費支給
+                <input type="checkbox" name="cb" value="">未経験者歓迎
+                <input type="checkbox" name="cb" value="">バイク／自動車通勤可
+                <input type="checkbox" name="cb" value="">髪型／カラー
+                <input type="checkbox" name="cb" value="">自転車通勤可
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">服装自由
+                <br>
+                <input type="submit" name="submit" value="検索">
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-detail">
+            <img src="img/大/キーボード.jpg" alt="商品1">
+            <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
+            <p><strong>勤務地：</strong>東京都江東区　お台場海浜公園駅から徒歩17分／国際展示場駅から徒歩17分</p>
+            <p><strong>曜日頻度：</strong>月～金　※土日祝休み</p>
+            <p><strong>時間：</strong>9:00～18:00　※休憩60分。8時～17時の勤務も選択可能です。</p>
+            <p><strong>期間：</strong>2025年4月7日（月）～2025年3月4日（火）</p>
+            <p><strong>時給：</strong>時給1800円＋交　【月収例】288,000円～　交通費支給あり</p>
+            <p><strong>仕事内容：</strong>
+                営業事務
+                ＊お客様オーダーの受付表作成
+                ＊在庫発注
+                ＊入荷した商品の引当てによる在庫確保業務
+                ＊確保した在庫の出荷確認
+                ＊加工発注書作成
+                ＊領収書発行
+                ＊問い合わせ対応…など。　
+                ※在宅勤務あり（3割以下）。　
+                ※9時～16時も相談可能です。
+            </p>
+            <div class="form-actions">
+                <button onclick="location.href='uw09_3.html'" type="button">キャンセルする</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
