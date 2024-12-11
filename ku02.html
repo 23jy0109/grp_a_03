@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>応募者一覧</title>
+    <title>求人申請</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,81 +41,94 @@
         </section>
         <section>
             <h3 id="category-title"></h3>
-            <center>
-                <h2>求人一覧</h2>
-            </center>
-            <p>現在求人数は３件あります。</p>
-            <p>求人をクリックすると応募者状況を見ることができます。</p>
         </section>
         
-        <table>        
-            <tr>
-                <td>
-                    <h1>10</h1>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/DVD-R.jpg" alt="DVD-R">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-info">
-                            <h3>ITエンジニアを募集</h3>
-                            <p><strong>契約期間：</strong>2024年12月4日（水）～2025年3月4日（火）</p>
-                            <p><strong>勤務時間：</strong>9:00～17:00</p>
-                            <p><strong>月給：</strong>約25万円</p>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h1>1</h1>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/DVD-R.jpg" alt="USB">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-info">
-                            <h3>在宅あり＊ピタッと18時まで</h3>
-                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年8月22日（金）</p>
-                            <p><strong>勤務時間：</strong>9:00～18:00</p>
-                            <p><strong>月給：</strong>約28万円</p>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h1>3</h1>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/DVD-R.jpg" alt="USB">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw03_5.html" class="product-link">
-                        <div class="product-info">
-                            <h3>自社パッケージソフトウェアの開発プログラマー/AD</h3>
-                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年7月4日（金）</p>
-                            <p><strong>勤務時間：</strong>21:00～9:00</p>
-                            <p><strong>月給：</strong>約30万円</p>
-                        </div>
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <p>求人申請をする場合は、情報を入力して「すすむ」を押してください。</p>
+        <form action="ku02_3.html">
+            <div class="form-group">
+                <label for="photo">写真</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+            <div class="form-group">
+                <label for="Occupation">職種</label>
+                <select name="Occupation" id="Occupation">
+                    <option value="">職種</option>
+                    <option value="">ITコンサルタント</option>
+                    <option value="">プロジェクトマネージャー</option>
+                    <option value="">プロジェクトリーダー</option>
+                    <option value="">システムエンジニア</option>
+                    <option value="">プログラマー</option>
+                    <option value="">サーバーエンジニア</option>
+                    <option value="">ネットワークエンジニア</option>
+                    <option value="">データベースエンジニア</option>
+                    <option value="">セキュリティエンジニア</option>
+                    <option value="">インフラエンジニア</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="businessContent">業務内容</label>
+                <input type="text" id="businessContent" name="businessContent" placeholder="テスト仕様書作成">
+            </div>
+            <div class="form-group">
+                <label for="employmentPeriodStart">雇用期間（開始日）</label>
+                <input type="date" id="employmentPeriodStart" name="employmentPeriodStart">
+            </div>
+            <div class="form-group">
+                <label for="employmentPeriodEnd">雇用期間（終了日）</label>
+                <input type="date" id="employmentPeriodEnd" name="employmentPeriodEnd">
+            </div>
+            <div class="form-group">
+                <label for="workingDays">予定出勤日数</label>
+                <input type="number" id="workingDays" name="workingDays">
+            </div>
+            <div class="form-group">
+                <label for="workingHoursStart">勤務時間（開始）</label>
+                <input type="time" id="workingHoursStart" name="workingHoursStart">
+            </div>
+            <div class="form-group">
+                <label for="workingHoursEnd">勤務時間（終了）</label>
+                <input type="time" id="workingHoursEnd" name="workingHoursEnd">
+            </div>
+            <div class="form-group">
+                <label for="salary">給料（月）</label>
+                <input type="number" id="salary" name="salary" value=0>万円
+            </div>
+            <div class="form-group">
+                <label for="recruitmentPeriodStart">募集期間（開始日）</label>
+                <input type="date" id="recruitmentPeriodStart" name="recruitmentPeriodStart">
+            </div>
+            <div class="form-group">
+                <label for="recruitmentPeriodEnd">募集期間（終了日）</label>
+                <input type="date" id="recruitmentPeriodEnd" name="recruitmentPeriodEnd">
+            </div>
+            <div class="form-group">
+                <label for="deadline">採用締め切り日</label>
+                <input type="date" id="deadline" name="deadline">
+            </div>
+            <div class="form-group">
+                <label for="people">採用人数</label>
+                <input type="number" id="people" name="people" value=0>人
+            </div>
+            <div class="form-group">
+                <label for="headText">見出し文</label>
+                <input type="text" id="headText" name="headText">
+            </div>
+            <div class="form-group">
+                <label for="businessDetails">業務詳細</label>
+                <input type="text" id="businessDetails" name="businessDetails">
+            </div>
+            <div class="form-group">
+                <label for="precautions">注意事項</label>
+                <input type="text" id="precautions" name="precautions">
+            </div>
+            <div class="form-group">
+                <label for="conditions">働くための条件</label>
+                <input type="text" id="conditions" name="conditions">
+            </div>
+        </form>
+        <div class="form-actions">
+            <button onclick="location.href='ku02_3.html'" type="button">すすむ</button>
+        </div>
     </main>
 </body>
 </html>
