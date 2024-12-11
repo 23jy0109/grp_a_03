@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請内容確認</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="search-results" style="display: none;">
+            <h3 id="search-title"></h3>
+            <div id="products"></div>
+        </section>
+        <section>
+            <h3 id="category-title"></h3>
+        </section>
+        <p>入力した情報を確認して「申請する」を押してください。</p>
+        <table border="1">
+            <tr>
+                <th>画像</th>
+                <td><img src="img/DVD-R.jpg" alt="DVD-R"></td>
+            </tr>
+            <tr>
+                <th>職種</th>
+                <td>システムエンジニア</td>
+            </tr>
+            <tr>
+                <th>業務内容</th>
+                <td>テスト仕様書作成</td>
+            </tr>
+            <tr>
+                <th>雇用期間（開始日）</th>
+                <td>2024/12/1</td>
+            </tr>
+            <tr>
+                <th>雇用期間（終了日）</th>
+                <td>2024/12/31</td>
+            </tr>
+            <tr>
+                <th>予定出勤日数</th>
+                <td>31日</td>
+            </tr>
+            <tr>
+                <th>勤務時間（開始）</th>
+                <td>09:00</td>
+            </tr>
+            <tr>
+                <th>勤務時間（終了）</th>
+                <td>18:00</td>
+            </tr>
+            <tr>
+                <th>給料（月）</th>
+                <td>28万円</td>
+            </tr>
+            <tr>
+                <th>募集期間（開始日）</th>
+                <td>2024/10/1</td>
+            </tr>
+            <tr>
+                <th>募集期間（終了日）</th>
+                <td>2024/10/20</td>
+            </tr>
+            <tr>
+                <th>採用締め切り日</th>
+                <td>2024/10/31</td>
+            </tr>
+            <tr>
+                <th>採用人数</th>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>見出し文</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>業務詳細</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>注意事項</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>働くための条件</th>
+                <td></td>
+            </tr>
+        </table>
+        <div class="form-actions">
+            <button onclick="location.href='ku02_5.html'" type="button">申請する</button>
+        </div>
+        <a href="ku02.html">修正</a>
+    </main>
+</body>
+</html>
