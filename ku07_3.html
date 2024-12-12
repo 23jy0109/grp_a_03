@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>終了者一覧</title>
+    <title>終了報告</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,48 +35,54 @@
     </header>
 
     <main class="container">
-        <section id="search-results" style="display: none;">
-            <h3 id="search-title"></h3>
-            <div id="products"></div>
-        </section>
         <section>
             <h3 id="category-title"></h3>
-            <center>
-                <h2>終了者一覧</h2>
-            </center>
-            <p>現在終了者数は２人です。</p>
-            <p>利用者をクリックすると終了報告を見ることができます。</p>
+            <p>（オープン評価、クローズ評価等の終了報告における注意事項）</p>
         </section>
         
-        <table border="1"> 
+        <table> 
             <tr>
-                <th>名前</th>
+                <th>日付</th>
+                <td>2024年12月31日</td>
+            </tr> 
+            <tr>
                 <th>業務内容</th>
-                <th>雇用終了日</th>
+                <td>テスト仕様書の作成</td>
             </tr>       
             <tr>
+                <th>利用者名</th>
+                <td>太宰　治無様</td>
+            </tr> 
+            <tr>
+                <th>オープン評価</th>
                 <td>
-                    <a href="ku07_3.html">太宰　治無</a>
-                </td>
-                <td>
-                    テスト仕様書の作成
-                </td>
-                <td>
-                    11/11
+                    <select name="open" id="open">
+                        <option value="">5</option>
+                        <option value="">4</option>
+                        <option value="">3</option>
+                        <option value="">2</option>
+                        <option value="">1</option>
+                    </select>
+                    ＊５段階評価
                 </td>
             </tr>
             <tr>
+                <th>クローズ評価</th>
                 <td>
-                    <a href="ku07_3.html">芥川無　龍之介</a>
+                    遅刻数　<input type="number" value="0"><br>
+                    欠勤数　<input type="number" value="0">
                 </td>
+            </tr> 
+            <tr>
+                <th>終了報告内容</th>
                 <td>
-                    事務
+                    <input type="text">
                 </td>
-                <td>
-                    12/5
-                </td>
-            </tr>
+            </tr> 
         </table>
+        <div class="form-actions">
+            <button onclick="location.href='ku07_5.html'" type="button">すすむ</button>
+        </div>
     </main>
 </body>
 </html>
