@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採用者一覧</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="search-results" style="display: none;">
+            <h3 id="search-title"></h3>
+            <div id="products"></div>
+        </section>
+        <section>
+            <h3 id="category-title"></h3>
+            <center>
+                <h2>採用者一覧</h2>
+            </center>
+            <p>採用者数は２人です。</p>
+            <p>利用者をクリックすると詳細情報を見ることができます。</p>
+        </section>
+        
+        <table border="1"> 
+            <tr>
+                <th>名前</th>
+                <th>完了した仕事数</th>
+                <th>評価</th>
+            </tr>       
+            <tr>
+                <td>
+                    <a href="ku05_5.html">太宰　治無</a>
+                </td>
+                <td>
+                    １０
+                </td>
+                <td>
+                    ３．６
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="ku05_5.html">芥川無　龍之介</a>
+                </td>
+                <td>
+                    １２
+                </td>
+                <td>
+                    ３．２
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
