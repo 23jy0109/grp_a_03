@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チェック済み応募者詳細</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <table border="1">
+            <tr>
+                <th>姓</th>
+                <td>太宰</td>
+            </tr>
+            <tr>
+                <th>名</th>
+                <td>治無</td>
+            </tr>
+            <tr>
+                <th>セイ</th>
+                <td>ダザイ</td>
+            </tr>
+            <tr>
+                <th>メイ</th>
+                <td>オサマナイ</td>
+            </tr>
+            <tr>
+                <th>生年月日</th>
+                <td>1949年7月14日</td>
+            </tr>
+            <tr>
+                <th>郵便番号</th>
+                <td>030-6945</td>
+            </tr>
+            <tr>
+                <th>住所</th>
+                <td>青森県青森市桜川８丁目１－２</td>
+            </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td>akutagawa@yuru.san</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>020-1187-3939</td>
+            </tr>
+            <tr>
+                <th>最終学歴</th>
+                <td>1970年　東京帝国大学　文学部　文学科　卒業</td>
+            </tr>
+            <tr>
+                <th rowspan="2">職歴</th>
+                <td>1970年　芥川株式会社　羅生門部　入社</td>
+            </tr>
+            <tr>
+                <td>1971年　芥川株式会社　羅生門部　退社</td>
+            </tr><!---->
+            <tr>
+                <th>資格</th>
+                <td>1970年　ITパスポート試験　合格</td>
+            </tr>
+            <tr>
+                <th>企業からの平均評価</th>
+                <td>3.4</td>
+            </tr>
+            <tr>
+                <th>ペナルティ数</th>
+                <td>2</td>
+            </tr>
+        </table>
+        <a href="ku04_5.html">チェック済み応募者一覧</a>
+    </main>
+</body>
+</html>
+

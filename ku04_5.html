@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>採用者一覧</title>
+    <title>チェック済み応募者一覧</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,17 +35,15 @@
     </header>
 
     <main class="container">
-        <section id="search-results" style="display: none;">
-            <h3 id="search-title"></h3>
-            <div id="products"></div>
-        </section>
         <section>
             <h3 id="category-title"></h3>
             <center>
-                <h2>採用者一覧</h2>
+                <h2>求人一覧</h2>
             </center>
-            <p>採用者数は２人です。</p>
+            <p>現在応募者数は２人です。</p>
             <p>利用者をクリックすると詳細情報を見ることができます。</p>
+            <br>
+            <p>選択数と採用可能人数：２／２</p>
         </section>
         
         <table border="1"> 
@@ -53,10 +51,11 @@
                 <th>名前</th>
                 <th>完了した仕事数</th>
                 <th>評価</th>
+                <th>チェック</th>
             </tr>       
             <tr>
                 <td>
-                    <a href="ku05_5.html">太宰　治無</a>
+                    <a href="ku04_S2.html">太宰　治無</a>
                 </td>
                 <td>
                     １０
@@ -64,10 +63,13 @@
                 <td>
                     ３．６
                 </td>
+                <td>
+                    <input type="checkbox" checked>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <a href="ku05_5.html">芥川無　龍之介</a>
+                    <a href="ku04_S2.html">芥川無　龍之介</a>
                 </td>
                 <td>
                     １２
@@ -75,8 +77,14 @@
                 <td>
                     ３．２
                 </td>
+                <td>
+                    <input type="checkbox" checked>
+                </td>
             </tr>
         </table>
+        <div class="form-actions">
+            <button onclick="location.href='ku04_7.html'" type="button">採用</button>
+        </div>
     </main>
 </body>
 </html>
