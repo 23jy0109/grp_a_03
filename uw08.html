@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script type="text/javascript" src="js/denshi.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
-            const searchQuery = params.get('search');  // 'search'パラメータを取得
+    <script>
+        // 職歴を追加する関数
+        function addWorkHistory() {
+            const workHistoryContainer = document.getElementById('workHistoryFields');
+            const newWorkHistory = document.createElement('div');
+            newWorkHistory.classList.add('form-group');
+            newWorkHistory.innerHTML = `
+                <input type="text" name="wH[]" placeholder="職歴を入力">
+            `;
+            workHistoryContainer.appendChild(newWorkHistory);
+        }
 
-            if (searchQuery) {
-                // 検索クエリが存在すればタイトルを変更
-                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
-                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
-                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
-                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
-            }
-        });
+        // 資格を追加する関数
+        function addLicense() {
+            const licenseContainer = document.getElementById('licenseFields');
+            const newLicense = document.createElement('div');
+            newLicense.classList.add('form-group');
+            newLicense.innerHTML = `
+                <input type="text" name="license[]" placeholder="資格を入力">
+            `;
+            licenseContainer.appendChild(newLicense);
+        }
     </script>
     <header>
         <div class="container">
@@ -108,15 +116,26 @@
                 <label for="aB">学歴</label>
                 <input type="text" id="aB" name="aB" value="1970年　東京帝国大学　文学部　文学科　卒業">
             </div>
-            <div class="form-group">
-                <label for="wH">職歴</label>
-                <input type="text" id="wH" name="wH" value="1970年　芥川株式会社　羅生門部　入社
-                1971年　芥川株式会社　羅生門部　退社">
+            <!-- 職歴入力フィールド -->
+            <div id="workHistoryFields">
+                <div class="form-group">
+                    <label for="wH">職歴</label>
+                    <input type="text" id="wH" name="wH[]" value="1970年　芥川株式会社　羅生門部　入社">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="wH" name="wH[]" value="1971年　芥川株式会社　羅生門部　退社">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="license">資格</label>
-                <input type="text" id="license" name="license" value="1970年　ITパスポート試験　合格">
+            <button type="button" onclick="addWorkHistory()">職歴を追加</button>
+
+            <!-- 資格入力フィールド -->
+            <div id="licenseFields">
+                <div class="form-group">
+                    <label for="license">資格</label>
+                    <input type="text" id="license" name="license[]" value="1970年　ITパスポート試験　合格">
+                </div>
             </div>
+            <button type="button" onclick="addLicense()">資格を追加</button>
         </form>
         <div class="form-actions">
             <button onclick="location.href='uw08_3.html'" type="button">更新</button>
