@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用者ログイン</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-group #email{
+            background-color: rgb(250, 190, 190);
+        }
+        .form-group #password{
+            background-color: rgb(250, 190, 190);
+        }
+        .form-group p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h2>ログイン</h2>
+        <form action="../uw09.html">
+            <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+                <p>メールアドレスが違います。</p>
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+                <p>パスワードが違います。</p>
+            </div>
+            <input type="submit" value="ログイン">
+            <hr>
+            <div class="form-group">
+                <p><a href="#">新規登録登録はこちら</a>　<a href=#>パスワードを忘れた</a></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
