@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用者情報変更</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <a href="uw09.html">求人検索</a>
+                <a href="uw07.html">利用者情報</a>
+            </nav>
+            <form action="uw03.html" method="get" class="search-form">
+                企業名：<input type="search" name="search" placeholder="企業名を入力してください">
+                <input type="submit" name="submit" value="検索">
+            </form>
+            <form action="uw03.html" method="get" class="search-form">
+                <strong>職種：</strong>
+                <select name="" id="">
+                    <option value="">職種</option>
+                    <option value="">ITコンサルタント</option>
+                    <option value="">プロジェクトマネージャー</option>
+                    <option value="">プロジェクトリーダー</option>
+                    <option value="">システムエンジニア</option>
+                    <option value="">プログラマー</option>
+                    <option value="">サーバーエンジニア</option>
+                    <option value="">ネットワークエンジニア</option>
+                    <option value="">データベースエンジニア</option>
+                    <option value="">セキュリティエンジニア</option>
+                    <option value="">インフラエンジニア</option>
+                </select>
+                <strong>　報酬：</strong>
+                <input type="number">
+                <strong>万円～</strong>
+                <strong>　勤務期間：</strong>開始
+                <input type="time" placeholder="開始">～
+                終了<input type="time" placeholder="終了">
+                <br>
+                <strong>待遇：</strong>
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">交通費支給
+                <input type="checkbox" name="cb" value="">未経験者歓迎
+                <input type="checkbox" name="cb" value="">バイク／自動車通勤可
+                <input type="checkbox" name="cb" value="">髪型／カラー
+                <input type="checkbox" name="cb" value="">自転車通勤可
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">服装自由
+                <br>
+                <input type="submit" name="submit" value="検索">
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>利用者情報変更</h1>
+        <form action="uw08_3.html">
+            <div class="form-group">
+                <label for="familyName">姓</label>
+                <input type="text" id="familyName" name="familyName" value="太宰">
+            </div>
+            <div class="form-group">
+                <label for="firstName">名</label>
+                <input type="text" id="firstName" name="firstName" value="治無">
+            </div>
+            <div class="form-group">
+                <label for="famN">姓</label>
+                <input type="text" id="famN" name="famN" value="ダザイ">
+            </div>
+            <div class="form-group">
+                <label for="firstN">名</label>
+                <input type="text" id="firstN" name="firstN" value="オサマナイ">
+            </div> 
+
+            <!-- 職歴入力フィールド -->
+            <div id="workHistoryFields">
+                <div class="form-group">
+                    <label for="wH">職歴</label>
+                    <input type="text" id="wH" name="wH[]" value="1970年　芥川株式会社　羅生門部　入社">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="wH" name="wH[]" value="1971年　芥川株式会社　羅生門部　退社">
+                </div>
+            </div>
+            <button type="button" onclick="addWorkHistory()">職歴を追加</button>
+
+            <!-- 資格入力フィールド -->
+            <div id="licenseFields">
+                <div class="form-group">
+                    <label for="license">資格</label>
+                    <input type="text" id="license" name="license[]" value="1970年　ITパスポート試験　合格">
+                </div>
+            </div>
+            <button type="button" onclick="addLicense()">資格を追加</button>
+
+            <div class="form-actions">
+                <button onclick="location.href='uw08_3.html'" type="button">更新</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // 職歴を追加する関数
+        function addWorkHistory() {
+            const workHistoryContainer = document.getElementById('workHistoryFields');
+            const newWorkHistory = document.createElement('div');
+            newWorkHistory.classList.add('form-group');
+            newWorkHistory.innerHTML = `
+                <input type="text" name="wH[]" placeholder="職歴を入力">
+            `;
+            workHistoryContainer.appendChild(newWorkHistory);
+        }
+
+        // 資格を追加する関数
+        function addLicense() {
+            const licenseContainer = document.getElementById('licenseFields');
+            const newLicense = document.createElement('div');
+            newLicense.classList.add('form-group');
+            newLicense.innerHTML = `
+                <input type="text" name="license[]" placeholder="資格を入力">
+            `;
+            licenseContainer.appendChild(newLicense);
+        }
+    </script>
+</body>
+</html>
