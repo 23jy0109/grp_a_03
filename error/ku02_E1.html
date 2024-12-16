@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求人申請</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-group #businessContent, #headText, #bD, #pp{
+            background-color: rgb(250, 190, 190);
+        }
+        .form-group p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="search-results" style="display: none;">
+            <h3 id="search-title"></h3>
+            <div id="products"></div>
+        </section>
+        <section>
+            <h3 id="category-title"></h3>
+        </section>
+        
+        <p>求人申請をする場合は、情報を入力して「すすむ」を押してください。</p>
+        <form action="ku02_3.html">
+            <div class="form-group">
+                <label for="photo">写真</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+            <div class="form-group">
+                <label for="Occupation">職種</label>
+                <select name="Occupation" id="Occupation">
+                    <option value="">職種</option>
+                    <option value="">ITコンサルタント</option>
+                    <option value="">プロジェクトマネージャー</option>
+                    <option value="">プロジェクトリーダー</option>
+                    <option value="">システムエンジニア</option>
+                    <option value="">プログラマー</option>
+                    <option value="">サーバーエンジニア</option>
+                    <option value="">ネットワークエンジニア</option>
+                    <option value="">データベースエンジニア</option>
+                    <option value="">セキュリティエンジニア</option>
+                    <option value="">インフラエンジニア</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="businessContent">業務内容</label>
+                <input type="text" id="businessContent" name="businessContent" placeholder="テスト仕様書作成">
+                <p>入力必須です。</p>
+            </div>
+            <div class="form-group">
+                <label for="employmentPeriodStart">雇用期間（開始日）</label>
+                <input type="date" id="employmentPeriodStart" name="employmentPeriodStart">
+            </div>
+            <div class="form-group">
+                <label for="employmentPeriodEnd">雇用期間（終了日）</label>
+                <input type="date" id="employmentPeriodEnd" name="employmentPeriodEnd">
+            </div>
+            <div class="form-group">
+                <label for="workingDays">予定出勤日数</label>
+                <input type="number" id="workingDays" name="workingDays">
+            </div>
+            <div class="form-group">
+                <label for="workingHoursStart">勤務時間（開始）</label>
+                <input type="time" id="workingHoursStart" name="workingHoursStart">
+            </div>
+            <div class="form-group">
+                <label for="workingHoursEnd">勤務時間（終了）</label>
+                <input type="time" id="workingHoursEnd" name="workingHoursEnd">
+            </div>
+            <div class="form-group">
+                <label for="salary">給料（月）</label>
+                <input type="number" id="salary" name="salary" value=0>万円
+            </div>
+            <div class="form-group">
+                <label for="recruitmentPeriodStart">募集期間（開始日）</label>
+                <input type="date" id="recruitmentPeriodStart" name="recruitmentPeriodStart">
+            </div>
+            <div class="form-group">
+                <label for="recruitmentPeriodEnd">募集期間（終了日）</label>
+                <input type="date" id="recruitmentPeriodEnd" name="recruitmentPeriodEnd">
+            </div>
+            <div class="form-group">
+                <label for="deadline">採用締め切り日</label>
+                <input type="date" id="deadline" name="deadline">
+            </div>
+            <div class="form-group">
+                <label for="people">採用人数</label>
+                <input type="number" id="people" name="people" value=0>人
+            </div>
+            <div class="form-group">
+                <label for="headText">見出し文</label>
+                <input type="text" id="headText" name="headText">
+                <p>入力必須です。</p>
+            </div>
+            <div class="form-group">
+                <label for="businessDetails">業務詳細</label>
+                <textarea name="" id="bD"></textarea>
+                <p>入力必須です。</p>
+            </div>
+            <div class="form-group">
+                <label for="precautions">注意事項</label>
+                <textarea name="" id="pp"></textarea>
+                <p>入力必須です。</p>
+            </div>
+            <div class="form-group">
+                <label for="conditions">待遇</label>
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">交通費支給
+                <input type="checkbox" name="cb" value="">未経験者歓迎
+                <input type="checkbox" name="cb" value="">バイク／自動車通勤可
+                <input type="checkbox" name="cb" value="">髪型／カラー
+                <input type="checkbox" name="cb" value="">自転車通勤可
+                <input type="checkbox" name="cb" value="">服装自由
+                <input type="checkbox" name="cb" value="">服装自由
+            </div>
+        </form>
+        <div class="form-actions">
+            <button onclick="location.href='ku02_3.html'" type="button">すすむ</button>
+        </div>
+    </main>
+</body>
+</html>

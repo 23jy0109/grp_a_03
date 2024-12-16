@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>応募者一覧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>応募者がいません。</h1>
+    </main>
+</body>
+</html>
