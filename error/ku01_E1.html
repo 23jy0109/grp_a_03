@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>利用者ログイン</title>
+    <title>求人先企業ログイン</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .form-group #email{
@@ -20,20 +20,24 @@
 <body>
     <main class="container">
         <h2>ログイン</h2>
-        <form action="../uw09.html">
+        <p>お渡しした、企業IDとパスワードを入力しログインしてください</p>
+        <form action="../ku04.html">
             <div class="form-group">
-                <label for="email">メールアドレス</label>
+                <label for="email">企業ID</label>
                 <input type="email" id="email" name="email" required>
-                <p>そのアカウントは停止されています。</p>
+                <p>企業IDが違います。</p>
             </div>
             <div class="form-group">
                 <label for="password">パスワード</label>
                 <input type="password" id="password" name="password" required>
+                <p>パスワードが違います。</p>
             </div>
-            <input type="submit" value="ログイン">
+            <div class="form-actions">
+                <button onclick="location.href='../ku04.html'" type="button">ログイン</button>
+            </div>
             <hr>
             <div class="form-group">
-                <p><a href="#">新規登録登録はこちら</a>　<a href=#>パスワードを忘れた</a></p>
+                <a href="#">新規登録登録はこちら</a>
             </div>
         </form>
     </main>
