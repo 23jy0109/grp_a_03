@@ -4,6 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>求人申請一覧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 基本的なスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナのスタイル */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #90bae7;
+}
+
+/* メインコンテンツ */
+main {
+    margin-top: 20px;
+}
+
+/* 見出しのスタイル */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -14,24 +96,28 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="container">
         <h2>現在の求人数は2件です。</h2>
-        <table border="1">
-            <tr>
-                <th>企業名</th>
-                <th>業務内容</th>
-                <th>送られてきた日付</th>
-            </tr>
-            <tr>
-                <td><a href="hu08_03.html" >株式会社おこのみはやきで</a></td>
-                <td>テスト仕様書の作成</td>
-                <td>11月2日</td>
-            </tr>
-            <tr>
-                <td><a href="hu08_03.html" >門蛇株式会社</a></td>
-                <td>セキュリティ保守</td>
-                <td>12月5日</td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>企業名</th>
+                    <th>業務内容</th>
+                    <th>送られてきた日付</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="hu08_03.html">株式会社おこのみはやきで</a></td>
+                    <td>テスト仕様書の作成</td>
+                    <td>11月2日</td>
+                </tr>
+                <tr>
+                    <td><a href="hu08_03.html">門蛇株式会社</a></td>
+                    <td>セキュリティ保守</td>
+                    <td>12月5日</td>
+                </tr>
+            </tbody>
         </table>
     </main>
 </body>
