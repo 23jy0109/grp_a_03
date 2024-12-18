@@ -4,6 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>企業側終了報告</title>
+    <style>
+        /* 基本的なスタイル設定 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* コンテナのスタイル */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #90bae7;
+        }
+
+        /* メインコンテンツ */
+        main {
+            margin-top: 20px;
+        }
+
+        /* 見出しのスタイル */
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* テーブルのスタイル */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* 特定のリンクのスタイル */
+        .userlink {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .userlink:hover {
+            text-decoration: underline;
+        }
+
+        /* 表の内容の調整 */
+        .top th, .top td {
+            text-align: left;
+        }
+
+        .top th {
+            width: 30%;
+        }
+
+        /* 終了報告内容のスタイル */
+        .report-content {
+            white-space: pre-line;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,52 +125,57 @@
             </nav>
         </div>
     </header>
-    <p>クローズ評価は利用者からは見られない評価です。<br>
-        ここでのクローズ及びオープン評価、終了報告内容は変更することができません</p>
-    <p style="text-align: right;">日付　2004年12月5日</p>
-    <table class="top">
-        <tr>
-            <th>業務内容</th>
-            <td>テスト仕様書の作成</td>
-        </tr>
-        <tr>
-            <th>利用者名</th>
-            <td>内田篤人様</td>
-        </tr>
-        <tr>
-            <th nowrap>オープン評価</th>
-            <td>1</td>
-        </tr>
+    <main class="container">
+        <h1>企業側終了報告</h1>
+        <p>クローズ評価は利用者からは見られない評価です。<br>
+            ここでのクローズ及びオープン評価、終了報告内容は変更することができません</p>
+        <p style="text-align: right;">日付　2004年12月5日</p>
+        
+        <table class="top">
+            <tr>
+                <th>業務内容</th>
+                <td>テスト仕様書の作成</td>
+            </tr>
+            <tr>
+                <th>利用者名</th>
+                <td>内田篤人様</td>
+            </tr>
+            <tr>
+                <th nowrap>オープン評価</th>
+                <td>1</td>
+            </tr>
 
-        <tr>
-           <th nowrap>クローズ評価</th>
-           <td>遅刻数 15</td>
-        </tr>
-        <tr>
-            <th></th>
-            <td>欠勤数 10</td>
-         </tr>
-    </table>
-    <table border="１">
-         <tr>
-            <th nowrap>終了報告内容</th>
-            <td colspan="2">1. 勤務態度について
-                太宰治無は、テスト仕様書の作成業務を担当しておりましたが、以下の点において勤務態度に問題が見受けられました。
-                <br>
-                ・遅刻・欠勤の頻発: 業務開始時間に遅れることが多く、また、欠勤が頻繁にありました。
-                <br>・業務の進捗への影響: 遅刻や欠勤により、業務の進捗が遅れ、チーム全体の効率にも悪影響を及ぼしました。
-                <br>・業務の品質: 作成されたテスト仕様書において、品質のばらつきが見られ、修正対応が多くなりました。
-                <br>2. その他の対応について
-                遅刻や欠勤の度に注意を行い、改善を求めてきましたが、改善が見られず、業務における信頼性や安定性の確保が難しくなりました。
-                そのため、誠に残念ではありますが、太宰治無については本日をもって契約終了とさせていただきます。
-                
-                <br>3. 今後の対応
-                今後、太宰治無の代わりとなる適切な人材を確保するため、引き続きご支援を賜りますようお願い申し上げます。
-                
-                このたびは、貴社から派遣いただきましたことに感謝申し上げますとともに、今後も引き続き良いご関係を築けますよう努めてまいります。
-                
-                何卒、よろしくお願い申し上げます。</td>
-         </tr>
-    </table>
+            <tr>
+               <th nowrap>クローズ評価</th>
+               <td>遅刻数 15</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>欠勤数 10</td>
+             </tr>
+        </table>
+
+        <table border="1">
+             <tr>
+                <th nowrap>終了報告内容</th>
+                <td colspan="2" class="report-content">1. 勤務態度について
+                    太宰治無は、テスト仕様書の作成業務を担当しておりましたが、以下の点において勤務態度に問題が見受けられました。
+                    <br>
+                    ・遅刻・欠勤の頻発: 業務開始時間に遅れることが多く、また、欠勤が頻繁にありました。
+                    <br>・業務の進捗への影響: 遅刻や欠勤により、業務の進捗が遅れ、チーム全体の効率にも悪影響を及ぼしました。
+                    <br>・業務の品質: 作成されたテスト仕様書において、品質のばらつきが見られ、修正対応が多くなりました。
+                    <br>2. その他の対応について
+                    遅刻や欠勤の度に注意を行い、改善を求めてきましたが、改善が見られず、業務における信頼性や安定性の確保が難しくなりました。
+                    そのため、誠に残念ではありますが、太宰治無については本日をもって契約終了とさせていただきます。
+                    
+                    <br>3. 今後の対応
+                    今後、太宰治無の代わりとなる適切な人材を確保するため、引き続きご支援を賜りますようお願い申し上げます。
+                    
+                    このたびは、貴社から派遣いただきましたことに感謝申し上げますとともに、今後も引き続き良いご関係を築けますよう努めてまいります。
+                    
+                    何卒、よろしくお願い申し上げます。</td>
+             </tr>
+        </table>
+    </main>
 </body>
 </html>
