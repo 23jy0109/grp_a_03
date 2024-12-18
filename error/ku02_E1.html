@@ -6,6 +6,164 @@
     <title>求人申請</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー（ナビゲーションバー） */
+header {
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 80px; /* ヘッダーが固定されているため、メインコンテンツにスペースを追加 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* 見出し */
+h3 {
+    font-size: 24px;
+    color: #2c6e4d; /* 緑色 */
+    margin-bottom: 15px;
+}
+
+/* 説明文 */
+p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* フォームのスタイル */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* ラベル */
+label {
+    display: block;
+    font-size: 14px;
+    color: #2c6e4d;
+    margin-bottom: 5px;
+}
+
+/* 入力欄 */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="file"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* テキストエリア */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* ホバー時の少し暗い緑 */
+}
+
+/* 横線 */
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* フォームアクション */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* 新規登録リンク */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
         .form-group #businessContent, #headText, #bD, #pp{
             background-color: rgb(250, 190, 190);
         }
