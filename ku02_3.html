@@ -5,6 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>申請内容確認</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 全体のレイアウト */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー（ナビゲーションバー） */
+header {
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 80px; /* ヘッダーが固定されているため、メインコンテンツにスペースを追加 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* 見出し */
+h3 {
+    font-size: 24px;
+    color: #2c6e4d; /* 緑色 */
+    margin-bottom: 15px;
+}
+
+/* 説明文 */
+p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* テーブルスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* 画像スタイル */
+table td img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* ホバー時の少し暗い緑 */
+}
+
+/* フォームアクション */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* 修正リンク */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* テーブルの余白 */
+table td, table th {
+    padding: 10px;
+}
+
+/* 最後のボタンとリンクのスタイル */
+.form-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    </style>
 </head>
 <body>
     <script type="text/javascript" src="js/denshi.js"></script>
@@ -42,6 +188,7 @@
         <section>
             <h3 id="category-title"></h3>
         </section>
+        <br>
         <p>入力した情報を確認して「申請する」を押してください。</p>
         <table border="1">
             <tr>

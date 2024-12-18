@@ -6,6 +6,147 @@
     <title>応募者一覧</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー（ナビゲーションバー） */
+header {
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 80px; /* ヘッダーが固定されているため、メインコンテンツにスペースを追加 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* 見出し */
+h1, h2 {
+    font-size: 32px;
+    color: #4caf50; /* 緑色 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* メインの内容のスタイル */
+p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #4caf50;
+    color: white;
+}
+
+table a {
+    text-decoration: none;
+    color: #4caf50;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049; /* ホバー時の少し暗い緑 */
+}
+
+/* フォームアクション */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* リンク */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
         h1{
             color: red;
         }
@@ -40,6 +181,7 @@
     </header>
 
     <main class="container">
+        <br>
         <h1>応募者がいません。</h1>
     </main>
 </body>

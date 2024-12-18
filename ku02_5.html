@@ -5,6 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>申請完了</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 全体のレイアウト */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー（ナビゲーションバー） */
+header {
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 80px; /* ヘッダーが固定されているため、メインコンテンツにスペースを追加 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* 見出し */
+h1 {
+    font-size: 32px;
+    color: #4caf50; /* 緑色 */
+    margin-bottom: 20px;
+}
+
+/* メインの内容のスタイル */
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* ボタン */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50; /* 緑色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* ホバー時の少し暗い緑 */
+}
+
+/* フォームアクション */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* 修正リンク */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
 </head>
 <body>
     <script type="text/javascript" src="js/denshi.js"></script>
@@ -35,6 +144,7 @@
     </header>
 
     <main class="container">
+        <br>
         <h1>申請が完了しました。</h1>
     </main>
 </body>
