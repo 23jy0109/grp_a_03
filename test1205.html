@@ -3,108 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>利用者ログイン</title>
+    <title>求人詳細</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        header {
+            background-color: rgb(251, 77, 77);
+            color: white;
+            padding: 20px 0;
         }
 
         .container {
-            width: 100%;
-            max-width: 400px;
+            width: 80%;
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
 
-        h2 {
-            text-align: center;
-            color: #333;
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .header-row:nth-child(1) nav {
+            justify-content: center;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 8px;
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .form-actions {
-            text-align: center;
-        }
-
-        .form-actions button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: rgb(237, 50, 50);
+        nav a {
             color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .form-actions button:hover {
-            background-color: rgb(237, 50, 50);
-        }
-
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 1px solid #ccc;
-        }
-
-        .form-group p {
-            text-align: center;
-        }
-
-        .form-group a {
-            color: #007bff;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        .form-group a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            background-color: #003f5c;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .search-form input[type="search"],
+        .search-form input[type="number"],
+        .search-form select,
+        .search-form input[type="date"] {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-form input[type="submit"] {
+            background-color: #005A8B;
+            color: white;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #003f5c;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="header-row">
+                <nav>
+                    <a href="uw09.html">求人検索</a>
+                    <a href="uw07.html">利用者情報</a>
+                </nav>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    企業名：<input type="search" name="search" placeholder="企業名を入力してください">
+                    <input type="submit" name="submit" value="検索">
+                </form>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    <strong>職種：</strong>
+                    <select name="" id="">
+                        <option value="">職種</option>
+                        <option value="">ITコンサルタント</option>
+                        <option value="">プロジェクトマネージャー</option>
+                        <option value="">プロジェクトリーダー</option>
+                        <option value="">システムエンジニア</option>
+                        <option value="">プログラマー</option>
+                        <option value="">サーバーエンジニア</option>
+                        <option value="">ネットワークエンジニア</option>
+                        <option value="">データベースエンジニア</option>
+                        <option value="">セキュリティエンジニア</option>
+                        <option value="">インフラエンジニア</option>
+                    </select>
+                    <strong>　報酬：</strong>
+                    <input type="number">
+                    <strong>万円～</strong>
+                    <strong>勤務期間：</strong>開始
+                    <input type="date" name="start_date">～
+                    終了<input type="date" name="end_date">
+                </form>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    <strong>待遇：</strong>
+                    <input type="checkbox" name="cb" value="">服装自由
+                    <input type="checkbox" name="cb" value="">交通費支給
+                    <input type="checkbox" name="cb" value="">未経験者歓迎
+                    <input type="checkbox" name="cb" value="">バイク／自動車通勤可
+                    <input type="checkbox" name="cb" value="">髪型／カラー
+                    <input type="checkbox" name="cb" value="">自転車通勤可
+                    <br>
+                    <input type="submit" name="submit" value="検索">
+                </form>
+            </div>
+        </div>
+    </header>
+
     <main class="container">
-        <h2>ログイン</h2>
-        <form action="uw09.html" method="post">
-            <div class="form-group">
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">パスワード</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+        <div class="product-detail">
+            <img src="img/PR1.png" alt="商品1" width="220" height="220">
+            <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
+            <p><strong>勤務地：</strong>東京都江東区　お台場海浜公園駅から徒歩17分／国際展示場駅から徒歩17分</p>
+            <p><strong>曜日頻度：</strong>月～金　※土日祝休み</p>
+            <p><strong>時間：</strong>9:00～18:00　※休憩60分。8時～17時の勤務も選択可能です。</p>
+            <p><strong>期間：</strong>2025年4月7日（月）～2025年3月4日（火）</p>
+            <p><strong>時給：</strong>時給1800円＋交　【月収例】288,000円～　交通費支給あり</p>
+            <p><strong>仕事内容：</strong>
+                営業事務
+                ＊お客様オーダーの受付表作成
+                ＊在庫発注
+                ＊入荷した商品の引当てによる在庫確保業務
+                ＊確保した在庫の出荷確認
+                ＊加工発注書作成
+                ＊領収書発行
+                ＊問い合わせ対応…など。　
+                ※在宅勤務あり（3割以下）。　
+                ※9時～16時も相談可能です。
+            </p>
             <div class="form-actions">
-                <button type="submit">ログイン</button>
+                <button onclick="location.href='uw04_3.html'" type="button">応募する</button>
             </div>
-            <hr>
-            <div class="form-group">
-                <p><a href="#">新規登録はこちら</a>　<a href="#">パスワードを忘れた</a></p>
-            </div>
-        </form>
+        </div>
+        <a href="uw03.html" class="btn" id="add-to-cart-btn">求人情報一覧へ</a>
     </main>
 </body>
 </html>

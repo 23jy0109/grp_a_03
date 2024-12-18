@@ -5,144 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>求人検索結果</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 基本設定 */
+        header {
+            background-color: rgb(251, 77, 77);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .header-row:nth-child(1) nav {
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #003f5c;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .search-form input[type="search"],
+        .search-form input[type="number"],
+        .search-form select,
+        .search-form input[type="date"] {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-form input[type="submit"] {
+            background-color: #005A8B;
+            color: white;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #003f5c;
+        }
+
+        main {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #005A8B;
+            margin-bottom: 20px;
+        }
+
+        .job-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .job-card {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: box-shadow 0.3s;
+        }
+
+        .job-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .job-info {
+            flex: 1;
+        }
+
+        .job-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .job-info p {
+            font-size: 14px;
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .job-info strong {
+            color: #005A8B;
+        }
+    </style>
 </head>
 <body>
-    <script type="text/javascript" src="js/denshi.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
-            const searchQuery = params.get('search');  // 'search'パラメータを取得
-
-            if (searchQuery) {
-                // 検索クエリが存在すればタイトルを変更
-                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
-                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
-                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
-                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
-            }
-        });
-    </script>
     <header>
         <div class="container">
-            <nav>
-                <a href="uw09.html">求人検索</a>
-                <a href="uw07.html">利用者情報</a>
-            </nav>
-            <form action="uw03.html" method="get" class="search-form">
-                企業名：<input type="search" name="search" placeholder="企業名を入力してください">
-                <input type="submit" name="submit" value="検索">
-            </form>
-            <form action="uw03.html" method="get" class="search-form">
-                <strong>職種：</strong>
-                <select name="" id="">
-                    <option value="">職種</option>
-                    <option value="">ITコンサルタント</option>
-                    <option value="">プロジェクトマネージャー</option>
-                    <option value="">プロジェクトリーダー</option>
-                    <option value="">システムエンジニア</option>
-                    <option value="">プログラマー</option>
-                    <option value="">サーバーエンジニア</option>
-                    <option value="">ネットワークエンジニア</option>
-                    <option value="">データベースエンジニア</option>
-                    <option value="">セキュリティエンジニア</option>
-                    <option value="">インフラエンジニア</option>
-                </select>
-                <strong>　報酬：</strong>
-                <input type="number">
-                <strong>万円～</strong>
-                <strong>　勤務期間：</strong>開始
-                <input type="time" placeholder="開始">～
-                終了<input type="time" placeholder="終了">
-                <br>
-                <strong>待遇：</strong>
-                <input type="checkbox" name="cb" value="">服装自由
-                <input type="checkbox" name="cb" value="">交通費支給
-                <input type="checkbox" name="cb" value="">未経験者歓迎
-                <input type="checkbox" name="cb" value="">バイク／自動車通勤可
-                <input type="checkbox" name="cb" value="">髪型／カラー
-                <input type="checkbox" name="cb" value="">自転車通勤可
-                <input type="checkbox" name="cb" value="">服装自由
-                <input type="checkbox" name="cb" value="">服装自由
-                <br>
-                <input type="submit" name="submit" value="検索">
-            </form>
+            <div class="header-row">
+                <nav>
+                    <a href="uw09.html">求人検索</a>
+                    <a href="uw07.html">利用者情報</a>
+                </nav>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    企業名：<input type="search" name="search" placeholder="企業名を入力してください">
+                    <input type="submit" name="submit" value="検索">
+                </form>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    <strong>職種：</strong>
+                    <select name="" id="">
+                        <option value="">職種</option>
+                        <option value="">ITコンサルタント</option>
+                        <option value="">プロジェクトマネージャー</option>
+                        <option value="">プロジェクトリーダー</option>
+                        <option value="">システムエンジニア</option>
+                        <option value="">プログラマー</option>
+                        <option value="">サーバーエンジニア</option>
+                        <option value="">ネットワークエンジニア</option>
+                        <option value="">データベースエンジニア</option>
+                        <option value="">セキュリティエンジニア</option>
+                        <option value="">インフラエンジニア</option>
+                    </select>
+                    <strong>　報酬：</strong>
+                    <input type="number">
+                    <strong>万円～</strong>
+                    <strong>勤務期間：</strong>開始
+                    <input type="date" name="start_date">～
+                    終了<input type="date" name="end_date">
+                </form>
+            </div>
+            <div class="header-row">
+                <form action="uw03.html" method="get" class="search-form">
+                    <strong>待遇：</strong>
+                    <input type="checkbox" name="cb" value="">服装自由
+                    <input type="checkbox" name="cb" value="">交通費支給
+                    <input type="checkbox" name="cb" value="">未経験者歓迎
+                    <input type="checkbox" name="cb" value="">バイク／自動車通勤可
+                    <input type="checkbox" name="cb" value="">髪型／カラー
+                    <input type="checkbox" name="cb" value="">自転車通勤可
+                    <br>
+                    <input type="submit" name="submit" value="検索">
+                </form>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section id="search-results" style="display: none;">
-            <h3 id="search-title"></h3>
-            <div id="products"></div>
-        </section>
-        <section>
-            <h3 id="category-title"></h3>
-            <center>
-                <h2>求人一覧</h2>
-            </center>
-        </section>
-        
-        <table>        
+        <h2>求人一覧</h2>
+    <table>
+        <div class="job-list">    
             <tr>
                 <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/PR1.png" alt="PR" width="220" height="220">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-info">
-                            <h3>【マルウェア・エニックス】ITエンジニアを募集</h3>
-                            <p><strong>契約期間：</strong>2024年12月4日（水）～2025年3月4日（火）</p>
-                            <p><strong>勤務時間：</strong>9:00～17:00</p>
-                            <p><strong>月給：</strong>約25万円</p>
-                            <p><strong>勤務地：</strong>東京都練馬区</p>
+                    <a href="uw04.html ">
+                        <div class="job-card">
+                            <img src="img/PR1.png" alt="求人画像">
+                            <div class="job-info">
+                                <h3>【マルウェア・エニックス】ITエンジニアを募集</h3>
+                                <p><strong>契約期間:</strong> 2024年12月4日 ～ 2025年3月4日</p>
+                                <p><strong>勤務時間:</strong> 9:00 ～ 17:00</p>
+                                <p><strong>月給:</strong> 約25万円</p>
+                                <p><strong>勤務地:</strong> 東京都練馬区</p>
+                            </div>
                         </div>
                     </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/PR3.png" alt="USB" width="220" height="220">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-info">
-                            <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
-                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年8月22日（金）</p>
-                            <p><strong>勤務時間：</strong>9:00～18:00</p>
-                            <p><strong>月給：</strong>約28万円</p>
-                            <p><strong>勤務地：</strong>東京都江東区</p>
+                    <a href="uw04.html ">
+                        <div class="job-card">
+                            <img src="img/PR3.png" alt="求人画像">
+                            <div class="job-info">
+                                <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
+                                <p><strong>契約期間:</strong> 2025年4月7日 ～ 2025年8月22日</p>
+                                <p><strong>勤務時間:</strong> 9:00 ～ 18:00</p>
+                                <p><strong>月給:</strong> 約28万円</p>
+                                <p><strong>勤務地:</strong> 東京都江東区</p>
+                            </div>
                         </div>
                     </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-image">
-                            <img src="img/PR5.png" alt="USB" width="220" height="220">
-                        </div>
-                    </a>
-                </td>
-                <td>
-                    <a href="uw04.html" class="product-link">
-                        <div class="product-info">
-                            <h3>【株式会社ベータ・エンジニアリング】自社パッケージソフトウェアの開発プログラマー/AD</h3>
-                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年7月4日（金）</p>
-                            <p><strong>勤務時間：</strong>21:00～9:00</p>
-                            <p><strong>月給：</strong>約30万円</p>
-                            <p><strong>勤務地：</strong>東京都品川区</p>
+                    <a href="uw04.html">
+                        <div class="job-card">
+                            <img src="img/PR5.png" alt="求人画像">
+                            <div class="job-info">
+                                <h3>【株式会社ベータ・エンジニアリング】自社パッケージソフトウェアの開発プログラマー</h3>
+                                <p><strong>契約期間:</strong> 2025年4月7日 ～ 2025年7月4日</p>
+                                <p><strong>勤務時間:</strong> 21:00 ～ 9:00</p>
+                                <p><strong>月給:</strong> 約30万円</p>
+                                <p><strong>勤務地:</strong> 東京都品川区</p>
+                            </div>
                         </div>
                     </a>
                 </td>
             </tr>
-        </table>
+        </div>
+    </table>
     </main>
 </body>
 </html>
