@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* 全体のレイアウト */
-body {
+        body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -66,70 +66,83 @@ main {
     border-radius: 8px;
 }
 
-/* 求人リスト */
+/* 求人テーブル */
 table {
     width: 100%;
-    border-collapse: collapse;
     margin-top: 20px;
+    border-collapse: collapse;
 }
 
-table td {
+table th, table td {
     padding: 15px;
+    border: 1px solid #ccc;
     text-align: left;
 }
 
-table td h1 {
-    font-size: 24px;
-    color: #4caf50;
+table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
 }
 
-/* 求人カード */
-.product-link {
-    text-decoration: none;
-    color: inherit;
+table td {
+    background-color: #f9f9f9;
 }
 
+/* 求人画像 */
 .product-image img {
-    max-width: 100%;
-    height: auto;
     border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.product-info {
-    margin-top: 15px;
-}
-
+/* 求人情報 */
 .product-info h3 {
     font-size: 18px;
     color: #333;
 }
 
 .product-info p {
-    font-size: 16px;
-    color: #555;
+    font-size: 14px;
+    color: #666;
 }
 
-.product-info p strong {
+/* リンクのスタイル */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-link:hover .product-image img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.product-link:hover .product-info h3 {
     color: #4caf50;
 }
 
-/* リンクの強調 */
-a {
-    text-decoration: none;
-    color: #007bff;
+/* セクションタイトル */
+h2, h3 {
+    color: #333;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #0056b3;
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-/* レスポンシブ対応（モバイル対応） */
+/* セクション内容 */
+section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* モバイル対応（レスポンシブデザイン） */
 @media (max-width: 768px) {
-    table td {
-        display: block;
+    table {
         width: 100%;
-        text-align: center;
     }
 
     .product-image img {
@@ -137,15 +150,11 @@ a:hover {
         height: auto;
     }
 
-    .product-info {
-        margin-top: 20px;
-    }
-
     .product-info h3 {
         font-size: 16px;
     }
 
-    .product-info p {
+    section p {
         font-size: 14px;
     }
 }
@@ -189,13 +198,18 @@ a:hover {
             <h3 id="category-title"></h3>
             <br>
             <center>
-                <h2>求人一覧</h2>
+                <h2>採用締め切り済み求人一覧</h2>
             </center>
             <p>現在求人数は３件あります。</p>
             <p>求人をクリックすると採用者一覧を見ることができます。 </p>
         </section>
         
-        <table>        
+        <table>
+            <tr>
+                <th>採用人数</th>
+                <th>イメージ画像</th>
+                <th>要項</th>
+            </tr>        
             <tr>
                 <td>
                     <h1>10</h1>
@@ -211,6 +225,7 @@ a:hover {
                     <a href="ku05_3.html" class="product-link">
                         <div class="product-info">
                             <h3>ITエンジニアを募集</h3>
+                            <p><strong>職種：</strong>システムエンジニア</p>
                             <p><strong>契約期間：</strong>2024年12月4日（水）～2025年3月4日（火）</p>
                             <p><strong>勤務時間：</strong>9:00～17:00</p>
                             <p><strong>月給：</strong>約25万円</p>
@@ -233,6 +248,7 @@ a:hover {
                     <a href="ku05_3.html" class="product-link">
                         <div class="product-info">
                             <h3>在宅あり＊ピタッと18時まで</h3>
+                            <p><strong>職種：</strong>プログラマー</p>
                             <p><strong>契約期間：</strong>2025年4月7日（月）～2025年8月22日（金）</p>
                             <p><strong>勤務時間：</strong>9:00～18:00</p>
                             <p><strong>月給：</strong>約28万円</p>
@@ -255,6 +271,7 @@ a:hover {
                     <a href="ku05_3.html" class="product-link">
                         <div class="product-info">
                             <h3>自社パッケージソフトウェアの開発プログラマー/AD</h3>
+                            <p><strong>職種：</strong>プログラマー</p>
                             <p><strong>契約期間：</strong>2025年4月7日（月）～2025年7月4日（金）</p>
                             <p><strong>勤務時間：</strong>21:00～9:00</p>
                             <p><strong>月給：</strong>約30万円</p>
