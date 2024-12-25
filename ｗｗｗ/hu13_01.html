@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クローズ評価検索</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 基本的なスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* コンテナのスタイル */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #90bae7;
+}
+
+/* メインコンテンツ */
+main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 見出しのスタイル */
+h2 {
+    color: #333;
+}
+
+/* 検索フォームのスタイル */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-form label {
+    font-size: 16px;
+    color: #333;
+}
+
+.search-form input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.search-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="hu13_01.html">クローズ評価検索</a>
+                <a href="hu08_01.html">求人申請一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>クローズ評価検索</h2>
+        <form action="hu13_03.html" method="get" class="search-form">
+            <label for="search">利用者名</label>
+            <input type="search" id="search" name="search" placeholder="利用者名を入力してください" required>
+            <input type="submit" name="submit" value="検索">
+        </form>
+    </main>
+</body>
+</html>

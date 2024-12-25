@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採用締め切り済み求人一覧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 全体のレイアウト */
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー */
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 求人テーブル */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+/* 求人画像 */
+.product-image img {
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 求人情報 */
+.product-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* リンクのスタイル */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-link:hover .product-image img {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.product-link:hover .product-info h3 {
+    color: #4caf50;
+}
+
+/* セクションタイトル */
+h2, h3 {
+    color: #333;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* セクション内容 */
+section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* モバイル対応（レスポンシブデザイン） */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="js/denshi.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);  // URLのクエリパラメータを取得
+            const searchQuery = params.get('search');  // 'search'パラメータを取得
+
+            if (searchQuery) {
+                // 検索クエリが存在すればタイトルを変更
+                document.title = `"${searchQuery}"の検索結果 | 商品カテゴリ一覧`;  // タイトルの変更
+                const searchTitle = document.createElement('h3');  // 新しいh2要素を作成
+                searchTitle.textContent = `「${searchQuery}」の検索結果`;  // 検索結果タイトルを設定
+                document.querySelector('main').prepend(searchTitle);  // メインコンテンツの先頭に追加
+            }
+        });
+    </script>
+    <header>
+        <div class="container">
+            <p>ようこそ！株式会社ハードバンク様</p>
+            <nav>
+                <a href="ku02.html">求人申請</a>
+                <a href="ku04.html">募集締め切り済み求人一覧</a>
+                <a href="ku05.html">採用締め切り済み求人一覧</a>
+                <a href="ku07.html">終了者一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="search-results" style="display: none;">
+            <h3 id="search-title"></h3>
+            <div id="products"></div>
+        </section>
+        <section>
+            <h3 id="category-title"></h3>
+            <br>
+            <center>
+                <h2>採用締め切り済み求人一覧</h2>
+            </center>
+            <p>現在求人数は３件あります。</p>
+            <p>求人をクリックすると採用者一覧を見ることができます。 </p>
+        </section>
+        
+        <table>
+            <tr>
+                <th>採用人数</th>
+                <th>イメージ画像</th>
+                <th>要項</th>
+            </tr>        
+            <tr>
+                <td>
+                    <h1>10</h1>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-image">
+                            <img src="img/PR1.png" alt="PR" width="220" height="220">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-info">
+                            <h3>ITエンジニアを募集</h3>
+                            <p><strong>職種：</strong>システムエンジニア</p>
+                            <p><strong>契約期間：</strong>2024年12月4日（水）～2025年3月4日（火）</p>
+                            <p><strong>勤務時間：</strong>9:00～17:00</p>
+                            <p><strong>月給：</strong>約25万円</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>1</h1>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-image">
+                            <img src="img/PR3.png" alt="USB" width="220" height="220">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-info">
+                            <h3>在宅あり＊ピタッと18時まで</h3>
+                            <p><strong>職種：</strong>プログラマー</p>
+                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年8月22日（金）</p>
+                            <p><strong>勤務時間：</strong>9:00～18:00</p>
+                            <p><strong>月給：</strong>約28万円</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>3</h1>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-image">
+                            <img src="img/PR6.png" alt="PR" width="220" height="220">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="ku05_3.html" class="product-link">
+                        <div class="product-info">
+                            <h3>自社パッケージソフトウェアの開発プログラマー/AD</h3>
+                            <p><strong>職種：</strong>プログラマー</p>
+                            <p><strong>契約期間：</strong>2025年4月7日（月）～2025年7月4日（金）</p>
+                            <p><strong>勤務時間：</strong>21:00～9:00</p>
+                            <p><strong>月給：</strong>約30万円</p>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

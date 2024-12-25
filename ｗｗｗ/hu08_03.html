@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求人情報</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 基本的なスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* コンテナのスタイル */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #90bae7;
+}
+
+/* メインコンテンツ */
+main {
+    margin-top: 20px;
+}
+
+/* 見出しのスタイル */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ボタンのスタイル */
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:nth-child(1) {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:nth-child(2) {
+    background-color: #dc3545;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="hu08_01.html">求人申請一覧</a>
+                <a href="hu13_01.html">クローズ評価検索</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h2>求人情報</h2>
+        <table>
+            <tr>
+                <th>職種</th>
+                <td>システムエンジニア</td>
+            </tr>
+            <tr>
+                <th>業務内容</th>
+                <td>テスト仕様書作成</td>
+            </tr>
+            <tr>
+                <th>雇用期間（開始日）</th>
+                <td>2024/12/1</td>
+            </tr>
+            <tr>
+                <th>雇用期間（終了日）</th>
+                <td>2024/12/31</td>
+            </tr>
+            <tr>
+                <th>予定出勤日数</th>
+                <td>31日</td>
+            </tr>
+            <tr>
+                <th>勤務時間（開始）</th>
+                <td>09:00</td>
+            </tr>
+            <tr>
+                <th>勤務時間（終了）</th>
+                <td>18:00</td>
+            </tr>
+            <tr>
+                <th>給料（月）</th>
+                <td>28万円</td>
+            </tr>
+            <tr>
+                <th>募集期間（開始日）</th>
+                <td>2024/10/1</td>
+            </tr>
+            <tr>
+                <th>募集期間（終了日）</th>
+                <td>2024/10/20</td>
+            </tr>
+            <tr>
+                <th>採用締め切り日</th>
+                <td>2024/10/31</td>
+            </tr>
+            <tr>
+                <th>採用人数</th>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>見出し文</th>
+                <td>【ハードバンク】在宅あり＊ピタッと18時まで</td>
+            </tr>
+            <tr>
+                <th>業務詳細</th>
+                <td>
+                    業務遂行の流れ
+                    <br>１．初期打ち合わせ: 派遣スタッフは、担当のセキュリティテストの詳細について、クライアントと打ち合わせを行い、要件を確認します。
+                    <br>２．テスト計画の作成: 要件に基づいて、テスト計画を作成し、どの範囲をどのようにテストするかを決定。
+                    <br>３．実行とレポート作成: テストを実行し、脆弱性やリスクを洗い出し、結果をレポートとしてまとめます。
+                    <br>４．改善提案: テスト結果に基づき、顧客に対して改善策を提案します。
+                    <br>５．最終報告: テスト終了後、最終的なセキュリティ評価と改善案を顧客に報告。
+                </td>
+            </tr>
+            <tr>
+                <th>注意事項</th>
+                <td>
+                    必要なスキル・経験
+                    <br>・必須スキル:
+                    <br>  ・セキュリティ関連の資格（例: CEH、CISSP、CompTIA Security+など）
+                    <br>  ・脆弱性診断ツールやペネトレーションテストツールを使用した経験（例: Nessus、Kali Linux、Metasploitなど）
+                    <br>  ・セキュリティ脅威、攻撃手法（例: SQLインジェクション、クロスサイトスクリプティング）の知識
+                    <br>  ・システムやネットワークのセキュリティに関する実務経験
+                    <br>  ・セキュリティリスク評価やレポート作成の経験
+                    <br>・歓迎スキル:
+                    <br>  ・プログラミング（例: Python、Ruby、Shellスクリプト）の知識
+                    <br>  ・セキュリティポリシー、コンプライアンスの理解
+                    <br>  ・インシデント対応やセキュリティ監視の経験
+                </td>
+            </tr>
+            <tr>
+                <th>待遇</th>
+                <td>服装自由　交通費支給</td>
+            </tr>
+        </table>
+
+        <form action="hu08_01.html">
+            <div class="form-actions">
+                <input type="submit" value="承認">
+                <input type="submit" value="非承認">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
