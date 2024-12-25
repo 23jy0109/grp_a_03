@@ -18,13 +18,6 @@
             margin: 0 auto;
         }
 
-        .HD {
-            background-color: #2c6d8b;
-            width: 250px;
-            padding-left: 6px;
-            margin: 0 auto;
-        }
-
         .header-row {
             display: flex;
             justify-content: space-between;
@@ -33,8 +26,18 @@
             margin-bottom: 10px;
         }
 
-        .header-row:nth-child(1) nav {
-            justify-content: center;
+        .system-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .HD {
+            background-color: #2c6d8b;
+            width: 250px;
+            padding-left: 6px;
+            margin: 0 auto;
         }
 
         nav {
@@ -146,13 +149,17 @@
         th{
             width: 100px;
         }
+        .back{
+            background-color: #f2817e;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="HD">
-                <div class="header-row">
+            <div class="header-row">
+                <span class="system-title">派遣システムHSD</span>
+                <div class="HD">
                     <nav>
                         <a href="uw09.html">求人検索</a>
                         <a href="uw07.html">利用者情報</a>
@@ -186,8 +193,8 @@
                     <input type="number">
                     <strong>万円～</strong>
                     <strong>勤務期間：</strong>開始
-                    <input type="date" name="start_date">～
-                    終了<input type="date" name="end_date">
+                    <input type="date" name="start_date">～終了
+                    <input type="date" name="end_date">
                 </form>
             </div>
             <div class="header-row">
@@ -205,7 +212,6 @@
             </div>
         </div>
     </header>
-
     <main class="container">
         <h2>就業中の仕事</h2>
         <div class="product-detail">
@@ -249,47 +255,49 @@
         </div>
         <br>
         <hr>
-        <h2>現在の応募済み求人</h2>
-        <div class="product-detail">
-            <img src="img/PR1.png" alt="PR" width="220" height="220">
-            <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
-            <table>
-                <tr>
-                    <th>勤務地：</th>
-                    <td>東京都江東区　お台場海浜公園駅から徒歩17分／国際展示場駅から徒歩17分</td>
-                </tr>
-                <tr>
-                    <th>曜日頻度：</th>
-                    <td>月～金　※土日祝休み</td>
-                </tr>
-                <tr>
-                    <th>時間：</th>
-                    <td>9:00～18:00　※休憩60分。8時～17時の勤務も選択可能です。</td>
-                </tr>
-                <tr>
-                    <th>期間：</th>
-                    <td>2025年4月7日（月）～2025年3月4日（火）</td>
-                </tr>
-                <tr>
-                    <th>時給：</th>
-                    <td>時給1800円＋交　【月収例】288,000円～　交通費支給あり</td>
-                </tr>
-                <tr>
-                    <th>仕事内容：</th>
-                    <td>営業事務
-                        ＊お客様オーダーの受付表作成
-                        ＊在庫発注
-                        ＊入荷した商品の引当てによる在庫確保業務
-                        ＊確保した在庫の出荷確認
-                        ＊加工発注書作成
-                        ＊領収書発行
-                        ＊問い合わせ対応…など。　
-                        ※在宅勤務あり（3割以下）。　
-                        ※9時～16時も相談可能です。</td>
-                </tr>
-            </table>
-            <div class="form-actions">
-                <button onclick="location.href='uw09_3.html'" type="button">キャンセルする</button>
+        <div class="back">
+            <h2>現在の応募済み求人</h2>
+            <div class="product-detail">
+                <img src="img/PR1.png" alt="PR" width="220" height="220">
+                <h3>【ハードバンク】在宅あり＊ピタッと18時まで</h3>
+                <table>
+                    <tr>
+                        <th>勤務地：</th>
+                        <td>東京都江東区　お台場海浜公園駅から徒歩17分／国際展示場駅から徒歩17分</td>
+                    </tr>
+                    <tr>
+                        <th>曜日頻度：</th>
+                        <td>月～金　※土日祝休み</td>
+                    </tr>
+                    <tr>
+                        <th>時間：</th>
+                        <td>9:00～18:00　※休憩60分。8時～17時の勤務も選択可能です。</td>
+                    </tr>
+                    <tr>
+                        <th>期間：</th>
+                        <td>2025年4月7日（月）～2025年3月4日（火）</td>
+                    </tr>
+                    <tr>
+                        <th>時給：</th>
+                        <td>時給1800円＋交　【月収例】288,000円～　交通費支給あり</td>
+                    </tr>
+                    <tr>
+                        <th>仕事内容：</th>
+                        <td>営業事務
+                            ＊お客様オーダーの受付表作成
+                            ＊在庫発注
+                            ＊入荷した商品の引当てによる在庫確保業務
+                            ＊確保した在庫の出荷確認
+                            ＊加工発注書作成
+                            ＊領収書発行
+                            ＊問い合わせ対応…など。　
+                            ※在宅勤務あり（3割以下）。　
+                            ※9時～16時も相談可能です。</td>
+                    </tr>
+                </table>
+                <div class="form-actions">
+                    <button onclick="location.href='uw09_3.html'" type="button">キャンセルする</button>
+                </div>
             </div>
         </div>
     </main>
