@@ -160,14 +160,22 @@
 
         // 資格を追加する関数
         function addLicense() {
-            const licenseContainer = document.getElementById('licenseFields');
-            const newLicense = document.createElement('div');
-            newLicense.classList.add('form-group');
-            newLicense.innerHTML = `
-                <input type="text" name="license[]" placeholder="資格を入力">
-            `;
-            licenseContainer.appendChild(newLicense);
-        }
+    const licenseContainer = document.getElementById('licenseFields');
+    const newLicense = document.createElement('div');
+    newLicense.classList.add('form-group');
+    newLicense.innerHTML = `
+        <select name="license[]">
+            <option value="">資格を選択してください</option>
+            <option value="basic_information">基本情報技術者試験</option>
+            <option value="applied_information">応用情報技術者試験</option>
+            <option value="network_specialist">ネットワークスペシャリスト試験</option>
+            <option value="security_specialist">情報セキュリティスペシャリスト試験</option>
+            <option value="cloud_certification">クラウド認定資格</option>
+        </select>
+    `;
+    licenseContainer.appendChild(newLicense);
+}
+
     </script>
     <header>
         <div class="container">
@@ -282,7 +290,7 @@
             <div id="licenseFields">
                 <div class="form-group">
                     <label for="license">資格</label>
-                    <input type="text" id="license" name="license[]" value="1970年　ITパスポート試験　合格">
+                    <p>ITパスポート試験</p>
                 </div>
             </div>
             <button type="button" onclick="addLicense()">資格を追加</button>
