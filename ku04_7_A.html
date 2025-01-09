@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>チェック済み応募者一覧</title>
+    <title>採用完了</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* 全体のレイアウト */
@@ -16,9 +16,10 @@ body {
 
 /* ヘッダー（ナビゲーションバー） */
 header {
-    background-color: #2c6e4d; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     padding: 10px 0;
+
     width: 100%;
     top: 0;
     left: 0;
@@ -26,6 +27,7 @@ header {
 }
 
 header .container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -35,17 +37,8 @@ header .container {
 
 header p {
     margin: 0;
-    font-size: 22px;
-    color: white;
+    font-size: 16px;
 }
-
-.system-title {
-            font-size: 40px;
-            font-family: cursive;
-            font-weight: bold;
-            margin-right: 10px;
-            color: rgb(238, 248, 97);
-        }
 
 nav {
     display: flex;
@@ -68,6 +61,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
+    background-color: rgb(250, 204, 204);
 }
 
 /* 見出し */
@@ -100,7 +94,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #428642;
+    background-color: #4caf50;
     color: white;
 }
 
@@ -120,7 +114,7 @@ button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: #009705; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -152,6 +146,10 @@ a:hover {
     text-decoration: underline;
 }
 
+h2{
+    color: red;
+}
+
     </style>
 </head>
 <body>
@@ -172,7 +170,6 @@ a:hover {
     </script>
     <header>
         <div class="container">
-            <span class="system-title">派遣システムHSD</span>
             <p>ようこそ！株式会社ハードバンク様</p>
             <nav>
                 <a href="ku02.html">求人申請</a>
@@ -210,6 +207,13 @@ a:hover {
                 </td>
             </tr>
         </table>
+        <center>
+            <h2>採用予定人数に対して３人足りていません。</h2>
+            <p>下のボタンから追加募集ができます。</p>
+        </center>
+        <div class="form-actions">
+            <button onclick="location.href='ku02_A.html'" type="button">追加募集</button>
+        </div>
     </main>
 </body>
 </html>

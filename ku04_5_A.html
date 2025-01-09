@@ -16,9 +16,10 @@ body {
 
 /* ヘッダー（ナビゲーションバー） */
 header {
-    background-color: #2c6e4d; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     padding: 10px 0;
+
     width: 100%;
     top: 0;
     left: 0;
@@ -26,6 +27,7 @@ header {
 }
 
 header .container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -35,17 +37,8 @@ header .container {
 
 header p {
     margin: 0;
-    font-size: 22px;
-    color: white;
+    font-size: 16px;
 }
-
-.system-title {
-            font-size: 40px;
-            font-family: cursive;
-            font-weight: bold;
-            margin-right: 10px;
-            color: rgb(238, 248, 97);
-        }
 
 nav {
     display: flex;
@@ -68,11 +61,12 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
+    background-color: rgb(250, 204, 204);
 }
 
 /* 見出し */
-h1 {
-    font-size: 36px;
+h1, h2 {
+    font-size: 32px;
     color: #4caf50; /* 緑色 */
     margin-bottom: 20px;
     text-align: center;
@@ -95,24 +89,28 @@ table {
 }
 
 table th, table td {
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ccc;
 }
 
 table th {
-    background-color: #428642;
+    background-color: #4caf50;
     color: white;
 }
 
-table td {
-    background-color: white;
+table a {
+    text-decoration: none;
+    color: #4caf50;
 }
 
-/* テーブル内の名前 */
-table td p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+table a:hover {
+    text-decoration: underline;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
 }
 
 /* ボタン */
@@ -120,7 +118,7 @@ button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: #009705; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -152,6 +150,10 @@ a:hover {
     text-decoration: underline;
 }
 
+h3{
+    color: red;
+}
+
     </style>
 </head>
 <body>
@@ -172,7 +174,6 @@ a:hover {
     </script>
     <header>
         <div class="container">
-            <span class="system-title">派遣システムHSD</span>
             <p>ようこそ！株式会社ハードバンク様</p>
             <nav>
                 <a href="ku02.html">求人申請</a>
@@ -184,32 +185,62 @@ a:hover {
     </header>
 
     <main class="container">
-        <section id="search-results" style="display: none;">
-            <h3 id="search-title"></h3>
-            <div id="products"></div>
-        </section>
         <section>
             <h3 id="category-title"></h3>
             <center>
-                <h1>採用が完了しました。</h1>
+                <h2>求人一覧</h2>
             </center>
-            <p>２人採用しました。</p>
+            <p>現在応募者数は２人です。</p>
+            <p>利用者をクリックすると詳細情報を見ることができます。</p>
+            <br>
+            <p>選択数と採用可能人数：２／５</p>
+            <center>
+                <h3>応募者が足りていません。</h3>
+            </center>
         </section>
+        
         <table border="1"> 
             <tr>
                 <th>名前</th>
+                <th>完了した仕事数</th>
+                <th>評価</th>
+                <th>チェック</th>
             </tr>       
             <tr>
                 <td>
-                    <p>太宰　治無</p>
+                    <a href="ku04_S2.html">太宰　治無</a>
                 </td>
-            </tr>     
+                <td>
+                    １０
+                </td>
+                <td>
+                    ３．６
+                </td>
+                <td>
+                    <input type="checkbox" checked>
+                </td>
+            </tr>
             <tr>
                 <td>
-                    <p>芥川無　龍之介</p>
+                    <a href="ku04_S2.html">芥川無　龍之介</a>
+                </td>
+                <td>
+                    １２
+                </td>
+                <td>
+                    ３．２
+                </td>
+                <td>
+                    <input type="checkbox" checked>
                 </td>
             </tr>
         </table>
+        <center>
+            <h3>※採用完了後に追加募集ができます。</h3>
+        </center>
+        <div class="form-actions">
+            <button onclick="location.href='ku04_7_A.html'" type="button">採用</button>
+        </div>
     </main>
 </body>
 </html>

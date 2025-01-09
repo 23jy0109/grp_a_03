@@ -16,7 +16,7 @@ body {
 
 /* ヘッダー（ナビゲーションバー） */
 header {
-    background-color: #2c6e4d; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     padding: 10px 0;
 
@@ -27,6 +27,7 @@ header {
 }
 
 header .container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -36,18 +37,8 @@ header .container {
 
 header p {
     margin: 0;
-    font-size: 22px;
-    color: white;
+    font-size: 16px;
 }
-
-.system-title {
-            font-size: 40px;
-            font-family: cursive;
-            font-weight: bold;
-            margin-right: 10px;
-            color: rgb(238, 248, 97);
-        }
-
 
 nav {
     display: flex;
@@ -101,8 +92,7 @@ table th, table td {
 }
 
 table th {
-    width: 200px;
-    background-color: #428642;
+    background-color: #4caf50;
     color: white;
 }
 
@@ -119,7 +109,7 @@ button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    background-color: #009705; /* 緑色 */
+    background-color: #4caf50; /* 緑色 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -181,7 +171,6 @@ table td, table th {
     </script>
     <header>
         <div class="container">
-            <span class="system-title">派遣システムHSD</span>
             <p>ようこそ！株式会社ハードバンク様</p>
             <nav>
                 <a href="ku02.html">求人申請</a>
@@ -200,7 +189,6 @@ table td, table th {
         <section>
             <h3 id="category-title"></h3>
         </section>
-        <center><h1>申請内容確認</h1></center>
         <p>入力した情報を確認して「申請する」を押してください。</p>
         <table border="1">
             <tr>
@@ -217,15 +205,15 @@ table td, table th {
             </tr>
             <tr>
                 <th>雇用期間（開始日）</th>
-                <td>2024/12/1</td>
+                <td>2025/3/1</td>
             </tr>
             <tr>
                 <th>雇用期間（終了日）</th>
-                <td>2024/12/31</td>
+                <td>2025/3/31</td>
             </tr>
             <tr>
                 <th>予定出勤日数</th>
-                <td>31日</td>
+                <td>23日</td>
             </tr>
             <tr>
                 <th>勤務時間（開始）</th>
@@ -241,15 +229,15 @@ table td, table th {
             </tr>
             <tr>
                 <th>募集期間（開始日）</th>
-                <td>2024/10/1</td>
+                <td>2024/12/1</td>
             </tr>
             <tr>
                 <th>募集期間（終了日）</th>
-                <td>2024/10/20</td>
+                <td>2025/1/10</td>
             </tr>
             <tr>
                 <th>採用締め切り日</th>
-                <td>2024/10/31</td>
+                <td>2024/1/20</td>
             </tr>
             <tr>
                 <th>採用人数</th>
@@ -287,14 +275,14 @@ table td, table th {
                 </td>
             </tr>
             <tr>
-                <th>待遇</th>
-            <td>服装自由　交通費支給</td>
+                <th>働くための条件</th>
+                <td>服装自由<br>交通費支給</td>
             </tr>
         </table>
         <div class="form-actions">
             <button onclick="location.href='ku02_5.html'" type="button">申請する</button>
         </div>
-        <a href="ku02.html">修正</a>
+        <a href="ku02_A.html">修正</a>
     </main>
 </body>
 </html>
